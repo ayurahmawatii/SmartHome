@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SmartHome</string>
+    <string name="suhu">suhu</string>
+    <string name="about">About</string>
+    <string name="setting">Setting</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="cek_suhu">Cek Suhu</string>
+    <string name="cek_barang">Cek Barang</string>
+    <string name="suhu_ruangan">Suhu Ruangan</string>
+    <string name="_36_c">36 C</string>
+    <string name="suhu_ruangan">Suhu Ruangan</string>
+    <string name="jarak_barang">Jarak Barang</string>
+    <string name="_12_m">12 m</string>
+    <string name="masih_aman">Masih Aman</string>
+    <string name="m_ragil_trireza_r">M. Ragil Trireza R.</string>
+    <string name="ayu_rahmawati">Ayu Rahmawati</string>
+    <string name="lampu_utama">Lampu Utama</string>
+    <string name="lampu">Lampu</string>
+    <string name="kamar">Kamar</string>
+    <string name="lampu_utama_mati">Lampu Utama : mati</string>
+    <string name="lampu_kamar_mati">Lampu Kamar : mati</string>
+    <string name="copyright_smart_home">Copyright Smart Home</string>
+</resources>

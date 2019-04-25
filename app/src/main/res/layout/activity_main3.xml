@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="#2E6FFF"
+        android:paddingBottom="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jarak_barang"
+            android:textSize="50sp"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="525dp"
+            android:text="@string/_12_m"
+            android:textSize="150sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="@string/masih_aman"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="left"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorPrimaryDark" />
+
+</LinearLayout>
