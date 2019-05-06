@@ -20,4 +20,5 @@
     <string name="lampu_utama_mati">Lampu Utama : mati</string>
     <string name="lampu_kamar_mati">Lampu Kamar : mati</string>
     <string name="copyright_smart_home">Copyright Smart Home</string>
+    <string name="copyright"><![CDATA[copyright 150 & 099]]></string>
 </resources>

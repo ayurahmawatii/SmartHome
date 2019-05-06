@@ -5,46 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main3Activity"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:background="#2E6FFF"
-        android:paddingBottom="15dp"
-        android:paddingTop="10dp">
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:background="@drawable/smart">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/jarak_barang"
-            android:textSize="50sp"
-            android:textColor="#000000"
+            android:layout_marginTop="35dp"
+            android:background="@color/colorPrimary"
             android:gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimaryDark" />
+            android:text="@string/suhu_ruangan"
+            android:textColor="#07e2ff"
+            android:textSize="50sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="350dp"
-            android:layout_height="525dp"
-            android:text="@string/_12_m"
-            android:textSize="150sp"
-            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:background="#07e2ff"
             android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorPrimaryDark" />
+            android:text="@string/_36_c"
+            android:textColor="#000000"
+            android:textSize="150sp"/>
 
         <TextView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/masih_aman"
-            android:textSize="30sp"
+            android:layout_marginTop="107dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_horizontal|center"
+            android:text="@string/copyright"
             android:textColor="#000000"
-            android:gravity="left"
-            android:layout_marginTop="25dp"
-            android:background="@color/colorPrimaryDark" />
+            android:textSize="20sp" />
 
+    </LinearLayout>
 </LinearLayout>
