@@ -24,8 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:gravity="center"
-            android:background="#2E6FFF">
-            
+            android:background="@color/colorPrimary">
+
             <ImageView
                 android:background="#2E6FFF"
                 android:layout_width="100dp"
@@ -76,11 +76,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:background="#2E6FFF"
+                    android:background="@drawable/circlebackground"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:src="@drawable/lamp1"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -98,7 +99,8 @@
                     android:src="@drawable/lamp1"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:background="#2E6FFF"/>
+                    android:background="@drawable/circlebackground"
+                    android:padding="15dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -111,10 +113,11 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:background="#2E6FFF"
+                    android:background="@drawable/circlebackground"
                     android:src="@drawable/dark"
                     android:elevation="20sp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -132,7 +135,8 @@
                     android:src="@drawable/dark"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:background="#2E6FFF"/>
+                    android:background="@drawable/circlebackground"
+                    android:padding="15dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -161,13 +165,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/copyright_smart_home"
+            android:text="@string/copyright"
             android:textSize="20sp"
             android:textColor="#000000"
             android:gravity="center_horizontal|center"
             android:background="@android:color/darker_gray"/>
 
     </LinearLayout>
-
-
 </RelativeLayout>

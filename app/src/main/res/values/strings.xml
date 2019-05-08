@@ -1,4 +1,19 @@
 <resources>
+    
+    <string-array name="item_cardview">
+        <item> Lamp </item>
+        <item> Temperature </item>
+        <item> Alarm </item>
+        <item> About </item>
+    </string-array>
+
+    <string-array name="item_cardview_img">
+        <item> @drawable/lampb3 </item>
+        <item> @drawable/suhu </item>
+        <item> @drawable/jam </item>
+        <item> @drawable/info </item>
+    </string-array>
+    
     <string name="app_name">SmartHome</string>
     <string name="suhu">suhu</string>
     <string name="about">About</string>
@@ -11,7 +26,6 @@
     <string name="jarak_barang">Jarak Barang</string>
     <string name="_12_m">12 m</string>
     <string name="masih_aman">Masih Aman</string>
-
     <string name="lampu_utama">Lampu Utama</string>
     <string name="lampu">Lampu</string>
     <string name="kamar">Kamar</string>

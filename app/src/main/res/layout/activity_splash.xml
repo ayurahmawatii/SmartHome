@@ -10,17 +10,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/smart">
+        android:background="@drawable/backg">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="470dp"
+            android:layout_marginTop="170dp"
             android:text="WELCOME TO"
             android:textAlignment="center"
             android:textColor="#ffff"
             android:textSize="45sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"/>
+        <ImageView
+            android:id="@+id/lambang"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/sh1"
+            android:contentDescription="TODO"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MY SMARTHOME"
+            android:textAlignment="center"
+            android:textColor="#ffff"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"/>
 
     </LinearLayout>
 
