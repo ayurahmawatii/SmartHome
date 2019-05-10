@@ -1,5 +1,5 @@
 <resources>
-    
+
     <string-array name="item_cardview">
         <item> Lamp </item>
         <item> Temperature </item>
@@ -13,7 +13,7 @@
         <item> @drawable/alarm </item>
         <item> @drawable/about </item>
     </string-array>
-    
+
     <string name="app_name">SmartHome</string>
     <string name="suhu">suhu</string>
     <string name="about">About</string>
@@ -35,5 +35,6 @@
     <string name="copyright"><![CDATA[copyright 150 & 099]]></string>
     <string name="m_ragil_trireza_r">M. Ragil Trireza R.</string>
     <string name="ayu_rahmawati">Ayu Rahmawati</string>
+    <string name="failed">Gagal Signin</string>
 
 </resources>
