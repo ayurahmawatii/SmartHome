@@ -20,6 +20,7 @@
             android:layout_marginTop="220dp"
             android:contentDescription="TODO"/>
         <TextView
+            android:id="@+id/tagline_app"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MY SMARTHOME"
