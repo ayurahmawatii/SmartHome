@@ -8,10 +8,10 @@
     </string-array>
 
     <string-array name="item_cardview_img">
-        <item> @drawable/lampb3 </item>
-        <item> @drawable/suhu </item>
-        <item> @drawable/jam </item>
-        <item> @drawable/info </item>
+        <item> @drawable/lamp1 </item>
+        <item> @drawable/thermometer </item>
+        <item> @drawable/alarm </item>
+        <item> @drawable/about </item>
     </string-array>
     
     <string name="app_name">SmartHome</string>
