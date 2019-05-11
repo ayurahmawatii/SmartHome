@@ -47,7 +47,6 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.View
             public void onClick(View v) {
                 switch (i) {
                     case 0 :
-                        Toast.makeText(context, "You Clicked Daftar Pegawai", Toast.LENGTH_SHORT).show();
                         Intent lampuKamar = new Intent(context, MainActivity.class);
                         context.startActivity(lampuKamar);
                         break;

@@ -9,9 +9,9 @@
 
     <string-array name="item_cardview_img">
         <item> @drawable/lamp1 </item>
-        <item> @drawable/thermometer </item>
+        <item> @drawable/temp </item>
         <item> @drawable/alarm </item>
-        <item> @drawable/about </item>
+        <item> @drawable/about3 </item>
     </string-array>
 
     <string name="app_name">SmartHome</string>
