@@ -31,13 +31,27 @@
         android:layout_below="@id/logo_sh"/>
 
     <TextView
-        android:id="@+id/name_user"
+        android:id="@+id/verify_user"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="NAMA"
+        android:text="Verif?"
         android:textSize="24dp"
         android:fontFamily="sans-serif"
         android:layout_below="@id/email_user"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/verify_btn"
+        android:layout_marginTop="31dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_below="@id/verify_user"
+        android:text="Verify Account"
+        android:background="@drawable/roundedbutton"/>
 
     <Button
         android:layout_width="match_parent"
@@ -49,8 +63,8 @@
         android:textSize="20sp"
         android:fontFamily="sans-serif"
         android:textStyle="bold"
-        android:layout_below="@id/name_user"
+        android:layout_below="@id/verify_btn"
         android:text="Logout"
-        android:background="@drawable/roundedbutton"/>
+        android:background="@drawable/rounded_edittextbottom"/>
 
 </RelativeLayout>
