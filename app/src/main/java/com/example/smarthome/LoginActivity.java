@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         //check the current user
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(LoginActivity.this, Dashboard.class));
+            startActivity(new Intent(LoginActivity.this, CheckAccount.class));
             finish();
         }
         setContentView(R.layout.activity_login);
@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // there was an error
                                     Log.d(TAG, "signInWithEmail:success");
-                                    Intent intent = new Intent(LoginActivity.this, Dashboard.class);
+                                    Intent intent = new Intent(LoginActivity.this, CheckAccount.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() != null) {
-                    startActivity(new Intent(LoginActivity.this, Dashboard.class));
+                    startActivity(new Intent(LoginActivity.this, CheckAccount.class));
                 }
             }
         };

@@ -1,7 +1,6 @@
 package com.example.smarthome;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,12 +10,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.smarthome.dashboard.Dashboard;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Dashboard extends AppCompatActivity {
+public class CheckAccount extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
     TextView emailText,verifyText;
@@ -30,7 +30,7 @@ public class Dashboard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_checkaccount);
         Button button = (Button) findViewById(R.id.signout);
         Button verifbtn = findViewById(R.id.verify_btn);
         mAuth = FirebaseAuth.getInstance();
@@ -47,10 +47,8 @@ public class Dashboard extends AppCompatActivity {
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();
             if(emailVerified){
-                Log.d("VERIF?","UDAH");
-                verifyText.setText("Verified Account");
-                verifbtn.setVisibility(View.INVISIBLE);
-
+                Intent dashboard = new Intent(CheckAccount.this, Dashboard.class);
+                startActivity(dashboard);
             }else{
                 Log.d("VERIF?","BELUM");
                 verifyText.setText("Please Verify Your Account");
@@ -60,7 +58,7 @@ public class Dashboard extends AppCompatActivity {
                         user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
-                                Toast.makeText(Dashboard.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CheckAccount.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -78,7 +76,7 @@ public class Dashboard extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser()==null)
                 {
-                    startActivity(new Intent(Dashboard.this, LoginActivity.class));
+                    startActivity(new Intent(CheckAccount.this, LoginActivity.class));
                 }
             }
         };
