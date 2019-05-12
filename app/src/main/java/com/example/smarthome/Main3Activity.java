@@ -19,6 +19,7 @@ public class Main3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
         t = findViewById(R.id.suhu);
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/Springwood.otf");
         t.setTypeface(myCustomFont);
