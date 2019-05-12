@@ -17,29 +17,28 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class LampControl extends AppCompatActivity {
-    DatabaseReference lampuUtama ;
-    ToggleButton button;
-    ImageView image;
-    TransitionDrawable drawable;
+public class LampControl2 extends AppCompatActivity {
+    DatabaseReference lampuKamar;
     float x1,x2;
-
+    ImageView image;
+    ToggleButton button;
+    TransitionDrawable drawable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lamp_control);
+        setContentView(R.layout.activity_lamp_control2);
 
-        lampuUtama = FirebaseDatabase.getInstance().getReference().child("lampuUtama");
-        button = findViewById(R.id.saklar_btn);
+        lampuKamar = FirebaseDatabase.getInstance().getReference().child("lampuKamar");
         image = findViewById(R.id.lampu_img);
+        button = findViewById(R.id.saklar_btn);
         drawable = (TransitionDrawable) image.getDrawable();
 
-        lampuUtama.addListenerForSingleValueEvent(new ValueEventListener() {
+        lampuKamar.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.getValue() == "1"){
                     button.setChecked(true);
-                }else{
+                }else {
                     button.setChecked(false);
                 }
             }
@@ -56,23 +55,20 @@ public class LampControl extends AppCompatActivity {
             image.getDrawable();
         }
 
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (button.isChecked()) {
-                    lampuUtama.setValue("1");
+                    lampuKamar.setValue("1");
                     drawable.startTransition(750);
                 }else {
-                    lampuUtama.setValue("0");
+                    lampuKamar.setValue("0");
                     drawable.reverseTransition(750);
                 }
             }
         });
-
     }
 
-    @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
@@ -80,12 +76,11 @@ public class LampControl extends AppCompatActivity {
                 break;
             case MotionEvent.ACTION_UP:
                 x2 = event.getX();
-                if(x2<x1) {
-                    Intent lampukamar = new Intent(LampControl.this, LampControl2.class);
+                if(x2>x1) {
+                    Intent lampukamar = new Intent(LampControl2.this, LampControl.class);
                     startActivity(lampukamar);
                 }
         }
         return false;
     }
-
 }

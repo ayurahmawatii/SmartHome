@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LampControl"></activity>
+        <activity android:name=".LampControl2"></activity>
+        <activity android:name=".LampControl" />
         <activity android:name=".dashboard.Dashboard" />
         <activity android:name=".Register" />
         <activity android:name=".CheckAccount" />
