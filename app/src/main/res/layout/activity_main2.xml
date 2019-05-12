@@ -12,12 +12,11 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:background="@color/colorPrimaryDark">
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/lambang"
-            android:background="#ffe0b3"
+
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/sh1"
@@ -37,13 +36,6 @@
             android:textColor="#000000" />
     </LinearLayout>
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Switch" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,26 +46,27 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="3dp"
             android:background="@color/colorPrimary"
             android:gravity="center_horizontal"
             android:text="@string/suhu_ruangan"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#000"
             android:textSize="50sp"
-            android:textStyle="bold" />
+            android:textStyle="" />
+
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="40dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/circlebackground"
             android:gravity="center"
             android:text="@string/_36_c"
             android:textColor="#000000"
-            android:textSize="160sp"
-            android:layout_marginBottom="120dp"/>
+            android:textSize="150sp"
+            android:layout_marginBottom="50dp"/>
 
     </LinearLayout>
 </LinearLayout>

@@ -3,7 +3,7 @@
     <string-array name="item_cardview">
         <item> Lamp </item>
         <item> Temperature </item>
-        <item> Alarm </item>
+        <item> Setting Waktu </item>
         <item> About </item>
     </string-array>
 
