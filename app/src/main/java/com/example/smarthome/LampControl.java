@@ -1,6 +1,7 @@
 package com.example.smarthome;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.TransitionDrawable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class LampControl extends AppCompatActivity {
+    TextView t;
     DatabaseReference lampuUtama ;
     ToggleButton button;
     ImageView image;
@@ -28,6 +31,10 @@ public class LampControl extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lamp_control);
+
+        t= (TextView) findViewById(R.id.lamp);
+        Typeface myCustomFont = Typeface.createFromAsset(getAssets(),"fonts/Springwood.otf");
+        t.setTypeface(myCustomFont);
 
         lampuUtama = FirebaseDatabase.getInstance().getReference().child("lampuUtama");
         button = findViewById(R.id.saklar_btn);

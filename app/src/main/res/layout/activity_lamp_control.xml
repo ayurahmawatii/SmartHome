@@ -8,7 +8,15 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="#000000">
-    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lamp"
+        android:text="Lampu Utama"
+        android:textColor="#ffff"
+        android:textSize="35sp"/>
+
     <ImageView
         android:id="@+id/lampu_img"
         android:layout_width="wrap_content"
