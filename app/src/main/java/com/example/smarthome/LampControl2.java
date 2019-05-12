@@ -85,9 +85,13 @@ public class LampControl2 extends AppCompatActivity {
                 x2 = event.getX();
                 if(x2>x1) {
                     Intent lampukamar = new Intent(LampControl2.this, LampControl.class);
+                    lampukamar.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    lampukamar.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(lampukamar);
+
                 }
         }
         return false;
     }
+
 }
