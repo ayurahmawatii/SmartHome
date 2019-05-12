@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LampAlarm.LampTimer"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/sh1" />
+
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingTop="15dp"
+        android:text="\nAnda Bisa Mengatur Kapan \nLampu Dihidupkan dan Dimatikan"
+        android:background="@drawable/text_header"
+        android:textAlignment="center"
+        android:layout_below="@id/logo"
+        android:textSize="23sp"
+        android:fontFamily="sans-serif"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/btn_alarmOn"
+        android:layout_marginTop="31dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="23sp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@id/text_header"
+        android:textStyle="bold"
+        android:text="Atur Waktu Lampu Menyala"
+        android:background="@drawable/roundedbutton"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/btn_alarmOff"
+        android:layout_marginTop="31dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="23sp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@id/btn_alarmOn"
+        android:textStyle="bold"
+        android:text="Atur Waktu Lampu Mati"
+        android:background="@drawable/roundedbutton"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>
