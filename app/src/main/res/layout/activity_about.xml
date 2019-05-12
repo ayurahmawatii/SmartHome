@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".about"
     android:orientation="vertical"
-    android:gravity="center"
-    android:id="@+id/about">
+    android:gravity="center">
 
 
     <ImageView
@@ -18,6 +17,7 @@
         android:src="@drawable/sh1"/>
 
     <TextView
+        android:id="@+id/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Smart Home APP"
@@ -26,6 +26,7 @@
         />
 
     <TextView
+        android:id="@+id/about1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aplikasi Sistem Kendali Jarak Jauh Berbasis Android"
@@ -33,6 +34,7 @@
         android:layout_marginTop="5dp"/>
 
     <TextView
+        android:id="@+id/about2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="M. Ragil Trireza R. (14116150)"
@@ -40,6 +42,7 @@
         android:layout_marginTop="40dp"/>
 
     <TextView
+        android:id="@+id/about3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ayu Rahmawati (14116099)"
