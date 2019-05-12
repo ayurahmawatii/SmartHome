@@ -8,12 +8,10 @@ import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.smarthome.Main2Activity;
+import com.example.smarthome.LampControl;
 import com.example.smarthome.MainActivity;
 import com.example.smarthome.R;
 
@@ -47,10 +45,9 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.View
             public void onClick(View v) {
                 switch (i) {
                     case 0 :
-                        Intent lampuKamar = new Intent(context, MainActivity.class);
+                        Intent lampuKamar = new Intent(context, LampControl.class);
                         context.startActivity(lampuKamar);
                         break;
-
                 }
             }
         });
