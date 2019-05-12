@@ -87,5 +87,5 @@ public class LampControl extends AppCompatActivity {
         }
         return false;
     }
-
+    
 }
