@@ -1,6 +1,7 @@
 package com.example.smarthome;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
+    TextView t;
     private EditText name, email_id, passwordcheck;
     private FirebaseAuth mAuth;
     private static final String TAG = "";
@@ -29,6 +31,10 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        t = (TextView) findViewById(R.id.btn_signup);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/Rustic.otf");
+        t.setTypeface(myCustomFont);
 
         TextView btnSignUp = (TextView) findViewById(R.id.login_page);
         btnSignUp.setOnClickListener(new View.OnClickListener() {

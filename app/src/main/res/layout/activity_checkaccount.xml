@@ -25,10 +25,11 @@
         android:id="@+id/email_user"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="EMAIL"
-        android:textSize="24dp"
+        android:layout_below="@id/logo_sh"
+        android:layout_marginTop="80dp"
         android:fontFamily="sans-serif"
-        android:layout_below="@id/logo_sh"/>
+        android:text="EMAIL"
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/verify_user"
@@ -46,7 +47,7 @@
         android:layout_marginTop="31dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:layout_below="@id/verify_user"
@@ -60,7 +61,7 @@
         android:layout_marginTop="31dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:layout_below="@id/verify_btn"

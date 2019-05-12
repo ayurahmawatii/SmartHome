@@ -56,6 +56,7 @@
             android:padding="12dp"
             android:fontFamily="sans-serif"
             android:text="Create Account"
+            android:textSize="25sp"
             android:background="@drawable/rounded_edittextbottom"
             android:backgroundTint="@color/colorPrimary"/>
         <TextView

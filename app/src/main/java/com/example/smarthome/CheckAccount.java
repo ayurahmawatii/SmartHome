@@ -1,6 +1,7 @@
 package com.example.smarthome;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class CheckAccount extends AppCompatActivity {
+    TextView t;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
     TextView emailText,verifyText;
@@ -31,6 +33,24 @@ public class CheckAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkaccount);
+
+        t = (TextView) findViewById(R.id.email_user);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/Rustic.otf");
+        t.setTypeface(myCustomFont);
+
+        t = (TextView) findViewById(R.id.verify_user);
+        Typeface myCustomFont2=Typeface.createFromAsset(getAssets(),"fonts/Rustic.otf");
+        t.setTypeface(myCustomFont2);
+
+        t = (TextView) findViewById(R.id.verify_btn);
+        Typeface myCustomFont3=Typeface.createFromAsset(getAssets(),"fonts/Rustic.otf");
+        t.setTypeface(myCustomFont);
+
+        t = (TextView) findViewById(R.id.signout);
+        Typeface myCustomFont4=Typeface.createFromAsset(getAssets(),"fonts/Rustic.otf");
+        t.setTypeface(myCustomFont2);
+
+
         Button button = (Button) findViewById(R.id.signout);
         Button verifbtn = findViewById(R.id.verify_btn);
         mAuth = FirebaseAuth.getInstance();
