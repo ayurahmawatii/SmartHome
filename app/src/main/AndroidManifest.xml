@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LampAlarm.LampTimer"></activity>
         <activity android:name=".about"></activity>
-        <activity android:name=".mode" />
         <activity android:name=".LampControl2" />
         <activity android:name=".LampControl" />
         <activity android:name=".dashboard.Dashboard" />
@@ -25,6 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".LampAlarm.AlertReceiver" />
     </application>
 
 </manifest>

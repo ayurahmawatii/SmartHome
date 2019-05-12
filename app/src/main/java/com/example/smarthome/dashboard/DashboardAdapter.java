@@ -11,9 +11,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.smarthome.LampAlarm.LampTimer;
 import com.example.smarthome.LampControl;
 import com.example.smarthome.Main3Activity;
 import com.example.smarthome.R;
+import com.example.smarthome.about;
 
 import java.util.ArrayList;
 
@@ -51,6 +53,14 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.View
                     case 1 :
                         Intent suhu = new Intent(context, Main3Activity.class);
                         context.startActivity(suhu);
+                        break;
+                    case 2 :
+                        Intent alarm = new Intent(context, LampTimer.class);
+                        context.startActivity(alarm);
+                        break;
+                    case 3 :
+                        Intent about = new Intent(context, about.class);
+                        context.startActivity(about);
                 }
             }
         });

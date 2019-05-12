@@ -36,5 +36,6 @@
     <string name="m_ragil_trireza_r">M. Ragil Trireza R.</string>
     <string name="ayu_rahmawati">Ayu Rahmawati</string>
     <string name="failed">Gagal Signin</string>
+    <string name="onn">time_picker_on</string>
 
 </resources>

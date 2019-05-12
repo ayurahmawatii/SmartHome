@@ -6,13 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.TextView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
-import com.example.smarthome.LoginActivity;
 import com.example.smarthome.R;
-import com.example.smarthome.Register;
-import com.example.smarthome.mode;
 
 import java.util.ArrayList;
 
@@ -26,13 +24,6 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
-        TextView setting = (TextView) findViewById(R.id.login_page);
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Dashboard.this, mode.class);
-                startActivity(intent);
 
         dashboardModelArrayList = new ArrayList<>();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
@@ -53,5 +44,23 @@ public class Dashboard extends AppCompatActivity {
             dashboardModelArrayList.add(dashboardModel);
         }
         images.recycle();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.optionmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.setting:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
