@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.smarthome.MenuSetting;
 import com.example.smarthome.R;
 
 import java.util.ArrayList;
@@ -58,6 +59,8 @@ public class Dashboard extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.setting:
+                Intent setting = new Intent(this, MenuSetting.class);
+                startActivity(setting);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
