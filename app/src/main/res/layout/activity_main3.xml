@@ -64,13 +64,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/circle"
             android:gravity="center"
-            android:text="@string/_36_c"
-            android:textColor="#000000"
-            android:textSize="150sp"/>
+            android:text="@string/wait"
+            android:textColor="@color/colorPrimary"
+            android:textSize="100sp"/>
 
         <TextView
             android:layout_width="match_parent"

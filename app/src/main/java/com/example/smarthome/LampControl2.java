@@ -43,7 +43,7 @@ public class LampControl2 extends AppCompatActivity {
         lampuKamar.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.getValue() == "1"){
+                if(dataSnapshot.getValue(String.class) == "1"){
                     button.setChecked(true);
                 }else {
                     button.setChecked(false);

@@ -44,7 +44,7 @@ public class LampControl extends AppCompatActivity {
         lampuUtama.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.getValue() == "1"){
+                if(dataSnapshot.getValue(String.class) == "1"){
                     button.setChecked(true);
                 }else{
                     button.setChecked(false);
@@ -94,5 +94,5 @@ public class LampControl extends AppCompatActivity {
         }
         return false;
     }
-    
+
 }
