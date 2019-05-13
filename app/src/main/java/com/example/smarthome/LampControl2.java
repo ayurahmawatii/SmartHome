@@ -40,28 +40,6 @@ public class LampControl2 extends AppCompatActivity {
         button = findViewById(R.id.saklar_btn);
         drawable = (TransitionDrawable) image.getDrawable();
 
-        lampuKamar.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.getValue(String.class) == "1"){
-                    button.setChecked(true);
-                }else {
-                    button.setChecked(false);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        if(button.isChecked()) {
-            drawable.startTransition(750);
-        } else {
-            image.getDrawable();
-        }
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -41,29 +41,6 @@ public class LampControl extends AppCompatActivity {
         image = findViewById(R.id.lampu_img);
         drawable = (TransitionDrawable) image.getDrawable();
 
-        lampuUtama.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.getValue(String.class) == "1"){
-                    button.setChecked(true);
-                }else{
-                    button.setChecked(false);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        if(button.isChecked()) {
-            drawable.startTransition(750);
-        } else {
-            image.getDrawable();
-        }
-
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

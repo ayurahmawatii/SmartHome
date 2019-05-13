@@ -41,7 +41,6 @@ public class LampTimer extends AppCompatActivity implements View.OnClickListener
         Typeface myCustomFont2=Typeface.createFromAsset(getAssets(),"fonts/Bunbun.ttf");
         textHeader.setTypeface(myCustomFont2);
     }
-
     @Override
     public void onClick(View v) {
         DialogFragment timePicker;
@@ -59,24 +58,25 @@ public class LampTimer extends AppCompatActivity implements View.OnClickListener
 
     }
 
+
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        String kondisi;
         Fragment tes = (Fragment) getSupportFragmentManager().findFragmentByTag("time_picker_on");
-        if(tes != null){
-            Log.d("MASUK","ON");
-            kondisi = "1";
-        }else{
-            Log.d("MASUK", "OFF");
-            kondisi = "0";
-        }
         Calendar c = Calendar.getInstance();
         c.set(Calendar.HOUR_OF_DAY, hourOfDay);
         c.set(Calendar.MINUTE, minute);
         c.set(Calendar.SECOND, 0);
-        Log.d("ONTIMESET",kondisi);
-        toastWaktu(c, kondisi);
-        startAlarm(c, kondisi);
+        if(tes != null){
+            Log.d("MASUK","ON");
+            String kondisi = "1";
+            startAlarm(c, kondisi);
+            toastWaktu(c, kondisi);
+        }else{
+            Log.d("MASUK", "OFF");
+            String kondisi = "0";
+            startAlarm(c, kondisi);
+            toastWaktu(c, kondisi);
+        }
 
     }
 

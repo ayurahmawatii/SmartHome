@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "";
     private EditText inputEmail, inputPassword;
     private ProgressBar progressBar;
-    SignInButton button;
+    SignInButton button_gugel;
     private final static int RC_SIGN_IN = 123;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth.AuthStateListener mAuthListner;
@@ -68,8 +68,8 @@ public class LoginActivity extends AppCompatActivity {
         Button ahlogin = (Button) findViewById(R.id.btn_login);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         TextView btnSignIn = (TextView) findViewById(R.id.btn_register);
-        button = (SignInButton) findViewById(R.id.sign_in_google);
-        button.setOnClickListener(new View.OnClickListener() {
+        button_gugel = (SignInButton) findViewById(R.id.sign_in_google);
+        button_gugel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signIn();
@@ -125,6 +125,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         };
+
+        //SIGN IN GOOGLE
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -135,6 +137,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
+    //END SIGN IN GOOGLE
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

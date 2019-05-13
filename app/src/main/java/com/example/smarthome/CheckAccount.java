@@ -67,6 +67,7 @@ public class CheckAccount extends AppCompatActivity {
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();
             if(emailVerified){
+                verifbtn.setVisibility(0);
                 Intent dashboard = new Intent(CheckAccount.this, Dashboard.class);
                 startActivity(dashboard);
             }else{
